@@ -1,4 +1,9 @@
 /**
+ *
+ * EluSAT1
+ *      see https://www.klosko.net/blog/=clanek=nocni-lampicka-elusat1
+ * Petr KLOSKO - www.klosko.net - 19th January 2021
+ * 
  * 
  * Version: 20200508
  *    - Remove some remote commands due to minimize HEX size
@@ -7,8 +12,24 @@
  *    - Circuit modification
  *        PowerOn / reset by any IR addr/command = 2x N-FET, In operation mode PB4 Block RESET pin, see schematics @github
  *        
- * IR & RGB LED Rainbow algorithm Copyright (c) 2016, Lukasz Marcin Podkalicki <lpodkalicki@gmail.com>
- * See Lukasz's github  https://github.com/lpodkalicki/blog/tree/master/avr/attiny13/012_led_rgb_ir_nec_proto_remote_control
+ *
+ *   Arduino IDE settings:
+ *     - ATtiny13
+ *     - 1.2MHz internal
+ *     - LTO enabled
+ *     - BOD disabled
+ *     - Micros disabled
+ *     - EEPROM not retained
+ *   
+ *   Fuse settings
+ *     -U lfuse:w:0x7A:m  -U hfuse:w:0xff:m
+ *   
+ *    IR & RGB LED Rainbow algorithm Copyright (c) 2016, Lukasz Marcin Podkalicki <lpodkalicki@gmail.com>
+ *    See Lukasz's github  https://github.com/lpodkalicki/blog/tree/master/avr/attiny13/012_led_rgb_ir_nec_proto_remote_control
+ * 
+ *    CC BY 4.0
+ *    Licensed under a Creative Commons Attribution 4.0 International license: 
+ *    http://creativecommons.org/licenses/by/4.0/
  */
 
 #include <avr/io.h>
